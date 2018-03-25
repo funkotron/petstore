@@ -2,6 +2,7 @@
 
 Run with export FLASK_APP=app.py
 `virtualenv -p python3 venv`
+
 `. ./virtualenv/bin/activate`
 
 Run tests
@@ -9,6 +10,7 @@ Run tests
 
 Run the app
 `export FLASK_APP=app.py`
+
 `python3 -m flask run`
 
 
