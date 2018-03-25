@@ -1,0 +1,20 @@
+<html>
+<body>
+<form action="#" method="POST">
+	<label>Postcode</label>
+	<input name="postcode" onkeyup="search()" type="text">
+	<input type="submit" value="Search">
+</form>
+{%  if not stores %}
+<h1>No stores found</h1>
+{% else %}
+	{% for store in stores %}
+	<h1>{{ store.name }}</h1>
+	{{ store.postcode }}
+	<a href="https://www.google.co.uk/maps/@{{ store.lat }},{{ store.long }}">
+		<img src="https://maps.googleapis.com/maps/api/staticmap?center={{ store.lat }},{{ store.long }}&zoom=14&size=400x400&key=AIzaSyBX8mTdVzJOMW-tbmPFtOGyqjaD8qjKpJs">
+	</a>
+	{% endfor %}
+{% endif %}
+</body>
+</html>
