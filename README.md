@@ -2,7 +2,7 @@
 
 ### Set up a virtual env
 * `virtualenv -p python3 venv`
-* `. ./virtualenv/bin/activate`
+* `. ./venv/bin/activate`
 
 ### Run tests
 * `nosetests`
